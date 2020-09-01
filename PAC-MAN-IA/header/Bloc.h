@@ -4,7 +4,6 @@
 
 #include "Controller.h"
 #include "Entity.h"
-#include "EntityBloc.h"
 
 class Bloc : public Entity
 {
