@@ -113,6 +113,7 @@ bool Controller::run()
 		for (int x = 0; x < largeur; ++x) {
 			for (int y = 0; y < hauteur; ++y) {
 				sf::RectangleShape cellShape(sf::Vector2f(cellWidth, cellHeight));
+				sf::Texture* texture;
 				cellShape.setPosition(x * cellWidth, y * cellHeight);
 
 				switch (grille.at(x).at(y).getType()) {
@@ -120,15 +121,35 @@ bool Controller::run()
 					cellShape.setFillColor(sf::Color::Black);
 					break;
 				case Bloc::POINT:
-					cellShape.setFillColor(sf::Color::Red);
+					texture = new sf::Texture;
+					texture->loadFromFile("resources/point.bmp");
+					cellShape.setTexture(texture);
 					break;
 				case Bloc::WALL:
 					cellShape.setFillColor(sf::Color::Blue);
+					break;
+				case Bloc::GUM:
+					texture = new sf::Texture;
+					texture->loadFromFile("resources/gum.bmp");
+					cellShape.setTexture(texture);
+					break;
+				default:
 					break;
 				}
 				window->draw(cellShape);
 			}
 		}
+		//Display Pacman
+		sf::RectangleShape pacmanShape(sf::Vector2f(cellWidth, cellHeight));
+		sf::Texture * texturePacman = new sf::Texture;
+		texturePacman->loadFromFile("resources/pacman.bmp");
+		pacmanShape.setTexture(texturePacman);
+		pacmanShape.setPosition(pacman.getX(), pacman.getY());
+		window->draw(pacmanShape);
+
+		//CALCULATIONS
+
+		//PACMAN MOVEMENTS
 
 		window->display();
 		return true;

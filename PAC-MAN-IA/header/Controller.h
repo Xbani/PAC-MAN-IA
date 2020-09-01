@@ -4,6 +4,8 @@
 #include <SFML/Graphics.hpp>
 #include <fstream>
 #include <sstream>
+#include <chrono>
+#include <Pacman.h>
 #include <Bloc.h>
 
 using namespace std;
@@ -11,6 +13,7 @@ class Controller
 {
 protected:
     vector<vector<Bloc>> grille;
+    Pacman pacman;
 
     int largeur;
     int hauteur;
