@@ -1,11 +1,18 @@
 #pragma once
 
-class Bloc
+#include <memory>
+
+#include "Controller.h"
+#include "Entity.h"
+#include "EntityBloc.h"
+
+class Bloc : public Entity
 {
 public:
     enum BlocType {
+        WALL,
         EMPTY,
-        DOT,
+        POINT,
         GUM
     };
 
@@ -17,9 +24,9 @@ public:
     Bloc(const Bloc& blocIn);
     ~Bloc();
 
-    Bloc(BlocType typeIn);
+    Bloc(BlocType typeIn, std::shared_ptr<Entity> contenuIn);
 
-    void onPacmanPresence();
+    Bloc::BlocType onPacmanPresence();
 
     Bloc& operator=(const Bloc& blocIn);
 };
