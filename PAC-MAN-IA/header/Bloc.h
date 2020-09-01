@@ -2,9 +2,9 @@
 
 #include <memory>
 
-#include "Controller.h"
+//#include "Controller.h"
 #include "Entity.h"
-#include "EntityBloc.h"
+//#include "EntityBloc.h"
 
 class Bloc : public Entity
 {
@@ -29,4 +29,7 @@ public:
     Bloc::BlocType onPacmanPresence();
 
     Bloc& operator=(const Bloc& blocIn);
+
+    Bloc::BlocType getType();
+    void setType(Bloc::BlocType typeIn);
 };

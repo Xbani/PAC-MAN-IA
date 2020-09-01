@@ -1,5 +1,5 @@
 #pragma once
-#include <SFML/Graphics.hpp>
+#include <Controller.h>
 int main();
 class Main
 {

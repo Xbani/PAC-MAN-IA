@@ -1,13 +1,16 @@
 #pragma once
 #include <vector>
 #include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+#include <fstream>
+#include <sstream>
+#include <Bloc.h>
 
-#include "Bloc.h"
-
+using namespace std;
 class Controller
 {
 protected:
-    std::vector<std::vector<Bloc>> grille;
+    vector<vector<Bloc>> grille;
 
     int largeur;
     int hauteur;
@@ -15,18 +18,21 @@ protected:
     static const int cellWidth = 32;
     static const int cellHeight = 32;
 
-    sf::Window window(sf::VideoMode(800, 600), "My window");
+    sf::RenderWindow* window;
 
 public:
     Controller();
-    Controller(const Controller& controllerIn);
     ~Controller();
 
     Controller(int largeurIn, int hauteurIn);
 
-    Controller& operator=(const Controller& controllerIn);
-
 private:
     void makeGrid();
     void makeGrid(int rowIn, int columnIn);
+    void makeGridFromFile(string path);
+
+    void setBlocAt(int x, int y, Bloc::BlocType typeIn);
+
+    bool run();
+
 };

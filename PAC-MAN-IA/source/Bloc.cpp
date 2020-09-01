@@ -35,4 +35,15 @@ Bloc::BlocType Bloc::onPacmanPresence()
 Bloc& Bloc::operator=(const Bloc& blocIn)
 {
 	type = blocIn.type;
+	return *this;
+}
+
+Bloc::BlocType Bloc::getType()
+{
+	return type;
+}
+
+void Bloc::setType(Bloc::BlocType typeIn)
+{
+	type = typeIn;
 }
