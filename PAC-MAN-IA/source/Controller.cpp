@@ -27,7 +27,3 @@ void Controller::makeGrid(int rowIn, int columnIn) {
 		}
 	}
 }
-
-void Controller :: initializeWindow() {
-	window = sf::Window(sf::VideoMode(largeur*cellWidth, hauteur*cellHeight), "PAC-MAN");
-}
