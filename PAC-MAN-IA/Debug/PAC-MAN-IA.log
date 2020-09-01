@@ -1,5 +1,4 @@
-﻿  Bloc.cpp
-  Controller.cpp
-  Main.cpp
-  Génération de code en cours...
-  PAC-MAN-IA.vcxproj -> D:\Ecole\2020-2021-DDJV-5A\IA appliquée\code\Pacman\PAC-MAN-IA\Debug\PAC-MAN-IA.exe
+﻿  Controller.cpp
+C:\Users\oscar\source\repos\PAC-MAN-IA\PAC-MAN-IA\source\Controller.cpp(32,1): error C2280: 'sf::Window &sf::Window::operator =(const sf::Window &)' : tentative de référencement d'une fonction supprimée
+C:\Users\oscar\source\repos\PAC-MAN-IA\SFML-2.5.1\include\SFML\Window\Window.hpp(550): message : le compilateur a généré 'sf::Window::operator =' ici
+C:\Users\oscar\source\repos\PAC-MAN-IA\SFML-2.5.1\include\SFML\Window\Window.hpp(550,1): message : 'sf::Window &sf::Window::operator =(const sf::Window &)' : la fonction a été supprimée implicitement, car un classe de base appelle une fonction supprimée ou inaccessible 'sf::NonCopyable &sf::NonCopyable::operator =(const sf::NonCopyable &)'
