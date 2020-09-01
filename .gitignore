@@ -2,3 +2,4 @@ SFML-2.5.1/bin/
 SFML-2.5.1/doc/
 SFML-2.5.1/exemples/
 .vs/
+*.db
