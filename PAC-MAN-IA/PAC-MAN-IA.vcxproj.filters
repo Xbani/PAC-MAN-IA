@@ -55,5 +55,11 @@
     <Image Include="resources\point.bmp">
       <Filter>Fichiers de ressources</Filter>
     </Image>
+    <Image Include="resources\pacman.bmp">
+      <Filter>Fichiers de ressources</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PAC-MAN-IA.APS" />
   </ItemGroup>
 </Project>

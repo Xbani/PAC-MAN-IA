@@ -1,7 +1,7 @@
 #include "Controller.h"
 
 Controller::Controller() {
-	makeGridFromFile("C:\\Users\\oscar\\source\\repos\\PAC-MAN-IA\\Debug\\lvl1.csv");
+	makeGridFromFile("lvl1.csv");
 	while (run());
 }
 
@@ -49,7 +49,7 @@ void Controller::makeGridFromFile(string path)
 	hauteur = 31;
 	makeGrid(28, 31);
 
-	std::ifstream myFile(path);
+	std::ifstream myFile(path, std::ifstream::in);
 	// Make sure the file is open
 	if (!myFile.is_open()) throw std::runtime_error("Could not open file");
 	// Helper vars
