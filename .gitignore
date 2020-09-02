@@ -16,3 +16,5 @@ SFML-2.5.1/exemples/
 PAC-MAN-IA/Debug/
 PAC-MAN-IA/Release/
 PAC-MAN-IA/x64/
+.gitignore
+shortcut.sh
