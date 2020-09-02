@@ -148,8 +148,25 @@ bool Controller::run()
 		window->draw(pacmanShape);
 
 		//CALCULATIONS
+		//
 
 		//PACMAN MOVEMENTS
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+			pacman.toggleMoveUp();
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+			pacman.toggleMoveRight();
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+			pacman.toggleMoveDown();
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+			pacman.toggleMoveLeft();
+		//Check Collision
+		if (grille.at((int)((pacman.getNextX() + 0.5) / cellWidth)).at((int)((pacman.getNextY() + 0.5) / cellHeight)).getType() != Bloc::WALL
+			&& grille.at((int)((pacman.getNextX() + 32 - 0.5) / cellWidth)).at((int)((pacman.getNextY() + 32 - 0.5) / cellHeight)).getType() != Bloc::WALL
+			&& grille.at((int)((pacman.getNextX() + 0.5) / cellWidth)).at((int)((pacman.getNextY() + 32 - 0.5) / cellHeight)).getType() != Bloc::WALL
+			&& grille.at((int)((pacman.getNextX() + 32 - 0.5) / cellWidth)).at((int)((pacman.getNextY() + 0.5) / cellHeight)).getType() != Bloc::WALL){
+			pacman.move();
+		}
+
 
 		window->display();
 		return true;

@@ -6,13 +6,15 @@ public:
     enum Direction {
         UP,
         RIGHT,
-        LEFT,
-        DOWN
+        DOWN,
+        LEFT
     };
 
 protected:
 	double x;
 	double y;
+
+    double speed;
 
     Pacman::Direction direction;
 
@@ -21,5 +23,15 @@ public:
 
     double getX();
     double getY();
+
+    double getNextX();
+    double getNextY();
+
+    void toggleMoveUp();
+    void toggleMoveRight();
+    void toggleMoveLeft();
+    void toggleMoveDown();
+
+    void move();
 };
 

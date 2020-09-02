@@ -6,6 +6,7 @@
 #include <sstream>
 #include <chrono>
 #include <Pacman.h>
+#include <math.h> 
 #include <Bloc.h>
 
 using namespace std;
