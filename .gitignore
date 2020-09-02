@@ -3,3 +3,16 @@ SFML-2.5.1/doc/
 SFML-2.5.1/exemples/
 .vs/
 *.db
+*.exe
+*.ilk
+*.obj
+*.pdb
+*.iobj
+*.ipdb
+*.log
+*.recipe
+*.idb
+*.pdb
+PAC-MAN-IA/Debug/
+PAC-MAN-IA/Release/
+PAC-MAN-IA/x64/
